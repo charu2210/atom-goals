@@ -7,7 +7,6 @@ import {
   Target,
   CheckCircle2,
   Clock3,
-  Activity,
   TrendingUp,
 } from "lucide-react";
 
@@ -24,18 +23,111 @@ const roleContent = {
     heading: "Your work, at a glance.",
     sub:
       "Track progress, submit updates, and stay aligned with your team.",
+
+    stats: [
+      {
+        title: "My Goals",
+        value: "5",
+        icon: <Target size={20} />,
+      },
+      {
+        title: "Completed",
+        value: "3",
+        icon: <CheckCircle2 size={20} />,
+      },
+      {
+        title: "Check-ins",
+        value: "2",
+        icon: <Clock3 size={20} />,
+      },
+    ],
+
+    goals: [
+      { name: "Revenue Growth", value: 78 },
+      { name: "Customer Retention", value: 52 },
+      { name: "AI Rollout", value: 91 },
+    ],
+
+    activity: [
+      "Submitted quarterly check-in",
+      "Updated AI initiative progress",
+      "Completed customer retention milestone",
+      "Added new KPI target",
+    ],
   },
 
   Manager: {
     heading: "See how the team is moving.",
     sub:
       "Review progress, approvals, and execution across your team.",
+
+    stats: [
+      {
+        title: "Team Goals",
+        value: "24",
+        icon: <Target size={20} />,
+      },
+      {
+        title: "Pending Reviews",
+        value: "7",
+        icon: <Clock3 size={20} />,
+      },
+      {
+        title: "Teams",
+        value: "4",
+        icon: <CheckCircle2 size={20} />,
+      },
+    ],
+
+    goals: [
+      { name: "North Region", value: 67 },
+      { name: "Retention Ops", value: 81 },
+      { name: "Productivity", value: 59 },
+    ],
+
+    activity: [
+      "Approved 3 employee check-ins",
+      "Team productivity increased 12%",
+      "Escalated overdue review cycle",
+      "Conducted quarterly alignment meeting",
+    ],
   },
 
   Admin: {
     heading: "Company-wide visibility.",
     sub:
       "Monitor alignment, performance, and operational momentum.",
+
+    stats: [
+      {
+        title: "Departments",
+        value: "12",
+        icon: <Target size={20} />,
+      },
+      {
+        title: "Employees",
+        value: "148",
+        icon: <CheckCircle2 size={20} />,
+      },
+      {
+        title: "Active Cycles",
+        value: "9",
+        icon: <Clock3 size={20} />,
+      },
+    ],
+
+    goals: [
+      { name: "Company Revenue", value: 84 },
+      { name: "Operational Health", value: 76 },
+      { name: "Expansion Goals", value: 63 },
+    ],
+
+    activity: [
+      "Board review scheduled",
+      "Global performance report exported",
+      "Company OKRs updated",
+      "Security audit completed",
+    ],
   },
 
 };
@@ -59,7 +151,7 @@ export default function DashboardPage() {
       p-8
     ">
 
-      {/* Background Effects */}
+      {/* Background Glow */}
       <div className="
         absolute top-[-200px] left-[20%]
         w-[500px] h-[500px]
@@ -79,7 +171,7 @@ export default function DashboardPage() {
         max-w-7xl mx-auto
       ">
 
-        {/* Header */}
+        {/* HEADER */}
         <div className="
           flex flex-col xl:flex-row
           justify-between gap-8
@@ -107,7 +199,7 @@ export default function DashboardPage() {
                 text-5xl xl:text-6xl
                 font-bold tracking-tight
                 mb-4
-                max-w-3xl
+                max-w-4xl
               "
             >
               {content.heading}
@@ -160,14 +252,14 @@ export default function DashboardPage() {
 
         </div>
 
-        {/* Main Grid */}
+        {/* MAIN GRID */}
         <div className="
           grid grid-cols-1
           xl:grid-cols-12
           gap-6
         ">
 
-          {/* BIG CARD */}
+          {/* PROGRESS CARD */}
           <motion.div
             whileHover={{ y: -4 }}
             className="
@@ -232,20 +324,7 @@ export default function DashboardPage() {
 
               <div className="space-y-8">
 
-                {[
-                  {
-                    name: "Revenue Growth",
-                    value: 78,
-                  },
-                  {
-                    name: "Customer Retention",
-                    value: 52,
-                  },
-                  {
-                    name: "AI Rollout",
-                    value: 91,
-                  },
-                ].map((goal, index) => (
+                {content.goals.map((goal, index) => (
 
                   <div key={goal.name}>
 
@@ -303,30 +382,14 @@ export default function DashboardPage() {
 
           </motion.div>
 
-          {/* SIDE STATS */}
+          {/* STATS */}
           <div className="
             xl:col-span-4
             grid grid-cols-1
             gap-6
           ">
 
-            {[
-              {
-                title: "Goals",
-                value: "12",
-                icon: <Target size={20} />,
-              },
-              {
-                title: "Completed",
-                value: "8",
-                icon: <CheckCircle2 size={20} />,
-              },
-              {
-                title: "Waiting",
-                value: "3",
-                icon: <Clock3 size={20} />,
-              },
-            ].map((card, index) => (
+            {content.stats.map((card) => (
 
               <motion.div
                 key={card.title}
@@ -377,7 +440,7 @@ export default function DashboardPage() {
 
           </div>
 
-          {/* Activity Feed */}
+          {/* ACTIVITY */}
           <motion.div
             whileHover={{ y: -4 }}
             className="
@@ -409,13 +472,7 @@ export default function DashboardPage() {
 
             <div className="space-y-5">
 
-              {[
-                "Quarterly goals submitted",
-                "Manager approved AI initiative",
-                "Revenue target updated",
-                "New milestone added",
-                "Review cycle started",
-              ].map((item, index) => (
+              {content.activity.map((item, index) => (
 
                 <motion.div
                   key={index}
@@ -458,7 +515,7 @@ export default function DashboardPage() {
 
           </motion.div>
 
-          {/* Focus Card */}
+          {/* FOCUS CARD */}
           <motion.div
             whileHover={{
               y: -4,
