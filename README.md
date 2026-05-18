@@ -1,36 +1,190 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AtomGoals
 
-## Getting Started
+A modern role-based goal management platform designed to help teams track execution, monitor progress, and stay aligned on organizational priorities.
 
-First, run the development server:
+## Live Demo
+
+🔗 Live App: https://atom-goals-iota.vercel.app
+
+## GitHub Repository
+
+🔗 Repository: https://github.com/charu2210/atom-goals
+
+---
+
+# Overview
+
+AtomGoals is a full-stack productivity and performance management platform built for modern teams.
+
+The platform allows employees, managers, and administrators to:
+
+- Create and manage goals
+- Track quarterly progress
+- Submit check-ins
+- Review approvals
+- Monitor execution metrics
+- Visualize operational momentum
+
+The project was designed with a strong focus on:
+
+- modern UI/UX
+- role-based experiences
+- responsive layouts
+- smooth interactions
+- scalable architecture
+
+---
+
+# Features
+
+## Role-Based Dashboard
+
+Different dashboard experiences for:
+
+- Employee
+- Manager
+- Admin
+
+Each role displays unique:
+
+- metrics
+- activity feeds
+- progress tracking
+- operational insights
+
+---
+
+## Goal Management
+
+- Create strategic goals
+- Assign weightages
+- Track quarterly execution
+- Visualize progress distribution
+- Dynamic goal cards with live feedback
+
+---
+
+## Quarterly Check-ins
+
+- Submit progress updates
+- Add execution notes
+- Track completion status
+- Monitor performance trends
+
+---
+
+## Approvals Workflow
+
+Managers can:
+
+- approve submissions
+- reject requests
+- review employee updates
+- manage execution cycles
+
+---
+
+## Modern UI/UX
+
+- glassmorphism-inspired design
+- animated transitions
+- responsive dashboard layouts
+- interactive motion effects
+- ambient gradients and depth
+- premium sidebar navigation
+
+---
+
+# Tech Stack
+
+## Frontend
+
+- Next.js 16
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+
+## Backend & Database
+
+- Supabase
+- PostgreSQL
+
+## Deployment
+
+- Vercel
+
+---
+
+# Local Setup
+
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/charu2210/atom-goals.git
+cd atom-goals
+```
+
+## 2. Install Dependencies
+
+```bash
+npm install
+```
+
+## 3. Configure Environment Variables
+
+Create a `.env.local` file:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+## 4. Start Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Future Improvements
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Authentication & RBAC
+- Real-time notifications
+- Team collaboration
+- Goal templates
+- AI-powered performance insights
+- Advanced analytics
+- Exportable reports
+- Mobile optimization
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+# Project Philosophy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+AtomGoals was designed to move beyond traditional corporate dashboards.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Instead of focusing only on CRUD operations, the platform emphasizes:
 
-## Deploy on Vercel
+- execution visibility
+- operational clarity
+- strategic alignment
+- modern product experience
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The goal was to create a system that feels dynamic, intentional, and usable in real organizational workflows.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+# Author
+
+Built by Charu
+
+GitHub: https://github.com/charu2210
+
+---
+
+# License
+
+This project is licensed under the MIT License.

@@ -58,7 +58,7 @@ export default function Sidebar() {
   return (
 
     <aside className="
-      w-[280px]
+      w-[300px]
       min-h-screen
       bg-[#0A0F1E]
       border-r border-white/10
@@ -69,7 +69,7 @@ export default function Sidebar() {
       <div className="mb-10">
 
         <h1 className="
-          text-5xl font-black
+          text-4xl font-black
           tracking-tight
           bg-gradient-to-r
           from-indigo-300

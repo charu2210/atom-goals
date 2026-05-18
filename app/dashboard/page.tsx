@@ -228,28 +228,27 @@ export default function DashboardPage() {
 
           </div>
 
-          <motion.button
-            whileHover={{
-              scale: 1.03,
-            }}
-            whileTap={{
-              scale: 0.97,
-            }}
-            className="
-              h-fit
-              bg-indigo-500
-              hover:bg-indigo-600
-              transition-all
-              px-7 py-4
-              rounded-2xl
-              font-semibold
-              shadow-xl
-              shadow-indigo-500/20
-            "
-          >
-            + New Goal
-          </motion.button>
-
+          <a
+  href="/dashboard/goals"
+  className="
+    h-fit
+    bg-indigo-500
+    hover:bg-indigo-600
+    transition-all duration-300
+    px-7 py-4
+    rounded-2xl
+    font-semibold
+    shadow-xl
+    shadow-indigo-500/20
+    inline-flex
+    items-center
+    justify-center
+    hover:scale-[1.03]
+    active:scale-[0.98]
+  "
+>
+  + New Goal
+</a>
         </div>
 
         {/* MAIN GRID */}
