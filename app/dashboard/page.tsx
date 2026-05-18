@@ -10,7 +10,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 
-import RoleSwitcher from "@/components/ui/RoleSwitcher";
+import { RoleSwitcher } from "@/components/ui/RoleSwitcher";
 
 type Role =
   | "Employee"
